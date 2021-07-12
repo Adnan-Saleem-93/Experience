@@ -1,7 +1,9 @@
 import React from "react";
+import {makeStyles} from "@material-ui/core/styles";
 import {Tabs, Tab, Typography, Box, Grid} from "@material-ui/core";
 
 const SideNavbar = ({data}) => {
+  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -31,7 +33,7 @@ const SideNavbar = ({data}) => {
           value={value}
           onChange={handleChange}
           aria-label="Vertical tabs example"
-          className="sidebar-tabs"
+          className={classes.tabs}
         >
           {renderSideNavbarItems()}
         </Tabs>
@@ -69,5 +71,11 @@ const a11yProps = (index) => {
     "aria-controls": `vertical-tabpanel-${index}`
   };
 };
+
+const useStyles = makeStyles((theme) => ({
+  tabs: {
+    borderRight: `1px solid ${theme.palette.divider}`
+  }
+}));
 
 export default SideNavbar;
