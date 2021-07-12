@@ -15,7 +15,6 @@ function App() {
     let response = await fetch(experienceURL);
     let result = await response.json();
     setData(result);
-    console.log(result);
   };
 
   return (

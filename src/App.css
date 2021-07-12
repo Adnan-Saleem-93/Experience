@@ -3,8 +3,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 2rem;
 }
-.makeStyles-root-1 {
-  display: flex !important;
+.MuiGrid-grid-xs-4 {
+  max-width: none !important;
+}
+.MuiTab-textColorInherit {
+  font-size: larger !important;
+}
+.MuiTabs-indicator {
+  display: none !important;
+}
+.Mui-selected {
+  border-right: 3px solid rebeccapurple !important;
+  color: royalblue !important;
+}
+.MuiTabs-flexContainerVertical > button:not(.Mui-selected):hover {
+  color: darkblue !important;
+  background-color: rgba(0, 0, 150, 0.15) !important;
 }

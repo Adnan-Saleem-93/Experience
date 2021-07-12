@@ -1,13 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {makeStyles} from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import {Tabs, Tab, Typography, Box, Grid} from "@material-ui/core";
 
 const SideNavbar = ({data}) => {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -21,7 +15,7 @@ const SideNavbar = ({data}) => {
   const renderTabItems = () => {
     return data.map((item, index) => {
       return (
-        <TabPanel value={value} index={index}>
+        <TabPanel value={value} index={index} key={index}>
           {item.title}
         </TabPanel>
       );
@@ -29,19 +23,23 @@ const SideNavbar = ({data}) => {
   };
 
   return (
-    <div className={classes.root}>
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        className={classes.tabs}
-      >
-        {renderSideNavbarItems()}
-      </Tabs>
-      {renderTabItems()}
-    </div>
+    <Grid container spacing={3}>
+      <Grid item xs={3}>
+        <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          aria-label="Vertical tabs example"
+          className="sidebar-tabs"
+        >
+          {renderSideNavbarItems()}
+        </Tabs>
+      </Grid>
+      <Grid item xs={9}>
+        {renderTabItems()}
+      </Grid>
+    </Grid>
   );
 };
 
@@ -65,56 +63,11 @@ const TabPanel = (props) => {
   );
 };
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
-};
-
 const a11yProps = (index) => {
   return {
     id: `vertical-tab-${index}`,
     "aria-controls": `vertical-tabpanel-${index}`
   };
-};
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    // flexGrow: 1,
-    // backgroundColor: theme.palette.background.paper,
-    // display: "flex",
-    // height: 224
-  },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`
-  }
-}));
-
-const VerticalTabs = ({company, index}) => {
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  return (
-    <div className={classes.root}>
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        className={classes.tabs}
-      >
-        <Tab label={company} {...a11yProps(index)} />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-    </div>
-  );
 };
 
 export default SideNavbar;
