@@ -5,6 +5,10 @@
   justify-content: center;
   margin: 2rem;
 }
+.App > h1:first-child {
+  margin-bottom: 4rem;
+  color: #004;
+}
 .MuiGrid-grid-xs-4 {
   max-width: none !important;
 }
@@ -20,4 +24,22 @@
 .MuiTabs-flexContainerVertical > button:not(.Mui-selected):hover {
   color: rebeccapurple !important;
   background-color: rgba(0, 0, 150, 0.15) !important;
+}
+.MuiBox-root {
+  padding: 0px !important;
+}
+.MuiBox-root:first-child {
+  font-size: x-large !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+.MuiChip-root {
+  margin: 4px 0 !important;
+  display: block !important;
+  padding: 7px 0px !important;
+  max-width: fit-content !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  background-color: rgba(48, 48, 150, 0.15) !important;
+  color: rgba(56, 36, 110, 0.548) !important;
+  letter-spacing: 3px;
 }

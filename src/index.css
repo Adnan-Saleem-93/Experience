@@ -20,6 +20,9 @@ h5,
 h6 {
   letter-spacing: 4px;
   transform: scale(1, 1.1);
-  color: #004;
   display: block !important;
+}
+
+body * {
+  font-family: inherit !important;
 }

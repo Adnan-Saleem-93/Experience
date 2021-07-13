@@ -1,6 +1,7 @@
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Tabs, Tab, Typography, Box, Grid} from "@material-ui/core";
+import ExperienceDetails from "./experience-details";
 
 const SideNavbar = ({data}) => {
   const classes = useStyles();
@@ -17,8 +18,8 @@ const SideNavbar = ({data}) => {
   const renderTabItems = () => {
     return data.map((item, index) => {
       return (
-        <TabPanel value={value} index={index} key={index}>
-          {item.title}
+        <TabPanel value={value} index={index} key={item.id}>
+          <ExperienceDetails {...item} />
         </TabPanel>
       );
     });
@@ -56,11 +57,7 @@ const TabPanel = (props) => {
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box p={3}>{children}</Box>}
     </div>
   );
 };
