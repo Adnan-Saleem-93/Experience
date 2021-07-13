@@ -1,6 +1,6 @@
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
-import {Tabs, Tab, Typography, Box, Grid} from "@material-ui/core";
+import {Tabs, Tab, Box, Grid} from "@material-ui/core";
 import ExperienceDetails from "./experience-details";
 
 const SideNavbar = ({data}) => {

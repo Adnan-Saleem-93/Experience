@@ -41,5 +41,28 @@
   font-weight: 600 !important;
   background-color: rgba(48, 48, 150, 0.15) !important;
   color: rgba(56, 36, 110, 0.548) !important;
-  letter-spacing: 3px;
+  letter-spacing: 3px !important;
+}
+.dates {
+  font-size: 16px !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.duty {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  display: block;
+}
+.duty-section {
+  padding-left: 0px !important;
+}
+.icon {
+  position: relative !important;
+  top: 10% !important;
+  background-color: rgba(48, 48, 150, 0.15) !important;
+  border-radius: 50%;
+  color: rgba(94, 57, 136, 0.616) !important;
+}
+.MuiGrid-grid-xs-9 {
+  min-width: 906px !important;
+  width: 906px !important;
 }
