@@ -52,7 +52,7 @@
   color: rgba(0, 0, 0, 0.7);
   display: block;
 }
-.duty-section {
+.duty-text {
   padding-left: 0px !important;
 }
 .icon {
@@ -65,4 +65,13 @@
 .MuiGrid-grid-xs-9 {
   min-width: 906px !important;
   width: 906px !important;
+}
+.btn-expandMoreLess {
+  margin: 1rem !important;
+  position: relative !important;
+  left: 30% !important;
+  background-color: #8c58bd6c !important;
+}
+.btn-expandMoreLess:hover {
+  background-color: #9e6fcab9 !important;
 }
