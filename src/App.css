@@ -70,8 +70,10 @@
   margin: 1rem !important;
   position: relative !important;
   left: 30% !important;
-  background-color: #8c58bd6c !important;
+  min-width: 114.953px !important;
+  width: 114.953px !important;
+  box-sizing: content-box !important;
 }
 .btn-expandMoreLess:hover {
-  background-color: #9e6fcab9 !important;
+  background-color: rgba(48, 48, 150, 0.15) !important;
 }

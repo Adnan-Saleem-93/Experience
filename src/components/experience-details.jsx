@@ -40,8 +40,9 @@ const ExperienceDetails = ({company, dates, duties, title}) => {
         })}
       </Grid>
       <Button
-        variant="contained"
+        variant="outlined"
         className="btn-expandMoreLess"
+        color="primary"
         endIcon={detailsHidden ? <ExpandMore /> : <ExpandLess />}
         onClick={handleButtonClick}
       >
