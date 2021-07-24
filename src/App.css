@@ -51,6 +51,7 @@
   font-size: 15px;
   color: rgba(0, 0, 0, 0.7);
   display: block;
+  max-width: inherit !important;
 }
 .duty-text {
   padding-left: 0px !important;
